@@ -1,29 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+:root {
+  --blue: #0ea5e9;
+  --white: #f8fafc;
+  --light-gray: #cbd5e1;
+  --gray: #9ca3af;
+  --colorline: #fde047;
+}
 html,
 body {
   margin: 0;
 }
 
 body {
-  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', system-ui, -apple-system, sans-serif;
 }
 
 img {
   width: 40px;
 }
-
+.iconify {
+  cursor: pointer;
+}
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 5fr;
 }
 
+/* HEADER */
+
+header {
+  padding: 0 20px;
+  padding-bottom: 10px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.search-section,
+.action-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar .search-input {
+  border: none;
+  border-radius: 20px;
+  background-color: var(--light-gray);
+  padding: 5px;
+  width: 400px;
+}
+
+.search-bar {
+  gap: 10px;
+  font-size: 1.25rem;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+  font-weight: 500;
+}
+
+.account .avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.account .iconify {
+  font-size: 1.25rem;
+}
+
+.action-bar .greet-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.greet-section .avatar {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.greet {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.username {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.action-bar .action-btns {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.action-btns button {
+  background-color: var(--blue);
+  border: none;
+  border-radius: 20px;
+  color: var(--white);
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 80px;
+}
+
+/* SIDEBAR */
+
 .sidebar {
-  background-color: #0ea5e9;
+  background-color: var(--blue);
   grid-row: 1 / 4;
   padding: 20px;
-  color: #f8fafc;
+  color: var(--white);
 }
 
 .menu {
@@ -59,5 +151,5 @@ img {
 .item > a {
   text-decoration: none;
   margin: 10px 0;
-  color: #f8fafc;
+  color: var(--white);
 }
