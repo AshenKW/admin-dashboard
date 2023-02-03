@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
 :root {
   --blue: #0ea5e9;
-  --white: #f8fafc;
-  --light-gray: #cbd5e1;
-  --gray: #9ca3af;
-  --colorline: #fde047;
+  --white: #fff;
+  --light-gray: #e5e7eb;
+  --zinc: #a1a1aa;
+  --colorline: #f59e0b;
 }
 html,
 body {
@@ -12,6 +12,7 @@ body {
 }
 
 body {
+  background-color: var(--light-gray);
   font-family: 'Roboto', system-ui, -apple-system, sans-serif;
 }
 
@@ -29,6 +30,7 @@ img {
 /* HEADER */
 
 header {
+  background-color: var(--white);
   padding: 0 20px;
   padding-bottom: 10px;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
@@ -152,4 +154,124 @@ header {
   text-decoration: none;
   margin: 10px 0;
   color: var(--white);
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 20px;
+  margin-top: 5px;
+  padding: 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.main-content .your-projects {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  margin: 10px 0;
+  font-size: 0.875rem;
+}
+
+.announcement {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  margin: 10px 0;
+  font-size: 0.875rem;
+}
+
+.project {
+  display: grid;
+  border-radius: 15px;
+  grid-template-columns: 1fr 15fr;
+  background-color: var(--white);
+  height: 190px;
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.6);
+}
+
+.project .colorline {
+  height: 100%;
+  border-radius: 15px 0px 0px 15px;
+  border-left: 10px solid var(--colorline);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.card-content .title {
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.card-content .card-text {
+  color: var(--zinc);
+  font-size: 0.75rem;
+  margin: 0;
+}
+.card-icons {
+  margin-top: auto;
+  align-self: flex-end;
+  font-size: 1.125rem;
+}
+
+.announcements {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 190px;
+  margin-bottom: 15px;
+}
+
+.news .news-title {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.news .text {
+  font-size: 0.688rem;
+  margin: 0;
+  color: var(--zinc);
+}
+
+.treding-title {
+  margin: 10px 0;
+  font-size: 0.875rem;
+}
+
+.trending {
+  background-color: var(--white);
+  max-width: 190px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.trending .users {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.users .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.user p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.project-name {
+  color: var(--zinc);
 }
